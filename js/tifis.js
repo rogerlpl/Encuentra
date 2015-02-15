@@ -5,8 +5,8 @@ function aleatorio(minimo, maximo)
     return numero;
 }
 var cronometro;
-var contador_segundos=1;
-var contador_minutos=30;
+var contador_segundos=30;
+var contador_minutos=1;
 function detenerCronometro()
 {
 	clearInterval(cronometro);

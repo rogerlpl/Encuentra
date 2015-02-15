@@ -107,7 +107,8 @@ function inicio()
 }
 function reiniciar()
 {
-	melissa.x=0;
+    empezarCronometro();	
+    melissa.x=0;
     melissa.y=0;
     liz.x = aleatorio(1,23);
     liz.y= aleatorio(1,23);

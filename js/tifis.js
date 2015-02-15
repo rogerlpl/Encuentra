@@ -7,12 +7,8 @@ function aleatorio(minimo, maximo)
 var cronometro;
 var contador_segundos=30;
 var	 contador_minutos=1;
-function reiniciarCronometro()
+function detenerCronometro()
 {
-	melissa.x=0;
-    melissa.y=0;
-    liz.x = aleatorio(1,23);
-    liz.y= aleatorio(1,23);
 	clearInterval(cronometro);
 }
 function empezarCronometro()
@@ -34,7 +30,7 @@ function empezarCronometro()
 			if(contador_minutos==0 && contador_segundos==1)
 			{
 				contador_segundos=0;
-				reiniciarCronometro();
+				detenerCronometro();
 				alert("No has podido encontrar a Liz a tiempo!");
 			}
 			minutos.innerHTML = contador_minutos;
@@ -109,7 +105,10 @@ function inicio()
 }
 function reiniciar()
 {
-	reiniciarCronometro();
+	melissa.x=0;
+    melissa.y=0;
+	liz.x = aleatorio(1,23);
+    liz.y= aleatorio(1,23);
     contador_minutos = 1;
     contador_segundos = 30;
     empezarCronometro();
@@ -226,7 +225,7 @@ function dibujar(direccion)
     {
         tablero.drawImage(liz.imagen, liz.x, liz.y);
         alert("Haz encontrado a liz :D!");
-        reiniciarCronometro();
-        empezarCronometro();
+        detenerCronometro();
+
     }
 }

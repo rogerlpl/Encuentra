@@ -99,12 +99,23 @@ function inicio()
     liz.imagen.onload = confirmarLiz;
 
     var boton = document.getElementById("btnReiniciar");
-    boton.addEventListener("click", empezarCronometro);
+    boton.addEventListener("click", reiniciar);
 
     document.addEventListener("keydown", teclado);
     empezarCronometro();
 
 }
+function reiniciar()
+{
+	melissa.x=0;
+    melissa.y=0;
+    liz.x = aleatorio(1,23);
+    liz.y= aleatorio(1,23);
+    contador_minutos = 1;
+    contador_segundos = 30;
+}
+
+
 function teclado(evento)
 {
     var codigo = evento.keyCode;

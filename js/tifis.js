@@ -5,7 +5,7 @@ function aleatorio(minimo, maximo)
     return numero;
 }
 var cronometro;
-var contador_segundos=30;
+var contador_segundos=29;
 var contador_minutos=1;
 function detenerCronometro()
 {

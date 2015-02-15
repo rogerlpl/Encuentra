@@ -5,8 +5,8 @@ function aleatorio(minimo, maximo)
     return numero;
 }
 var cronometro;
-var contador_segundos=30;
-var	 contador_minutos=1;
+var contador_segundos=1;
+var contador_minutos=30;
 function detenerCronometro()
 {
 	clearInterval(cronometro);
@@ -31,7 +31,13 @@ function empezarCronometro()
 			{
 				contador_segundos=0;
 				detenerCronometro();
-				alert("No has podido encontrar a Liz a tiempo!");
+				alert("La malvada Liz te ha hecho trampa!");
+				alert("Te revelare donde estaba.");
+				melissa.velocidad=0;
+        			tablero.drawImage(liz.imagen, liz.x, liz.y);
+
+        		alert("Si quieres jugar denuevo pulsa el boton reiniciar.");
+
 			}
 			minutos.innerHTML = contador_minutos;
 			segundos.innerHTML = contador_segundos;
@@ -235,4 +241,5 @@ function dibujar(direccion)
         detenerCronometro();
 
     }
+   
 }

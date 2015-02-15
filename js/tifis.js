@@ -98,7 +98,8 @@ function inicio()
     liz.imagen.src = "images/liz.png";
     liz.imagen.onload = confirmarLiz;
 
-    document.addEventListener("click", empezarCronometro);
+    var boton = document.getElementById("btnReiniciar");
+    boton.addEventListener("click", empezarCronometro);
 
     document.addEventListener("keydown", teclado);
     empezarCronometro();

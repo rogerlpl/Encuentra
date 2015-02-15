@@ -56,6 +56,7 @@ var melissa = {
     atrasOK: false,
     derOK: false,
     izqOK: false,
+    encontroLiz: false,
     velocidad: 20,
     x: 0,
     y: 0
@@ -126,6 +127,10 @@ function teclado(evento)
     	{
         melissa.y += melissa.velocidad;
     	}
+    	if(encontroLiz)
+    	{
+    		 melissa.y += melissa.velocidad;
+    	}
     }
     if(codigo == teclas.DOWN)
     {
@@ -135,6 +140,10 @@ function teclado(evento)
         {
             melissa.y -= melissa.velocidad;
         }
+        if(encontroLiz)
+    	{
+    		 melissa.y -= melissa.velocidad;
+    	}
     }
     if(codigo == teclas.LEFT)
     {
@@ -143,6 +152,10 @@ function teclado(evento)
     	if(melissa.x<0 || (melissa.x == 220 && melissa.y <=200) ||( melissa.y >= 160  && melissa.y <= 200 ) && (melissa.x <= 130) )
     	{
     		melissa.x += melissa.velocidad;
+    	}
+    	if(encontroLiz)
+    	{
+    		 melissa.y += melissa.velocidad;
     	}
         
     }
@@ -153,6 +166,10 @@ function teclado(evento)
     	if(melissa.x>460 || melissa.y <= 200 && melissa.x == 180 ||( melissa.y >= 320  && melissa.y <= 340 ) && (melissa.x == 140) )
     	{
         melissa.x -= melissa.velocidad;
+    	}
+    	if(encontroLiz)
+    	{
+    		 melissa.y -= melissa.velocidad;
     	}
     }
     dibujar(codigo);
@@ -225,6 +242,7 @@ function dibujar(direccion)
     {
         tablero.drawImage(liz.imagen, liz.x, liz.y);
         alert("Haz encontrado a liz :D!");
+        alert("Si quieres jugar denuevo pulsa el boton reiniciar.");
         detenerCronometro();
 
     }

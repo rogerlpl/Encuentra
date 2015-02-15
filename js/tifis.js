@@ -32,7 +32,7 @@ function empezarCronometro()
 
 			if(contador_minutos==0 && contador_segundos==1)
 			{
-				contador_minutos=1;
+				contador_minutos=0;
 				contador_segundos=0;
 				reiniciarCronometro();
 				alert("No has podido encontrar a Liz a tiempo!");

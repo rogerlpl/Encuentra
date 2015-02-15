@@ -5,8 +5,8 @@ function aleatorio(minimo, maximo)
     return numero;
 }
 var cronometro;
-var contador_segundos=29;
-var contador_minutos=1;
+var contador_segundos=60;
+var contador_minutos=0;
 function detenerCronometro()
 {
 	clearInterval(cronometro);
@@ -23,7 +23,7 @@ function empezarCronometro()
 			if(contador_segundos==0)
 			{
 				contador_segundos=59;
-				contador_minutos--;
+			//	contador_minutos--;
 				
 			}
 
@@ -116,8 +116,8 @@ function reiniciar()
     melissa.velocidad=20;
 	liz.x = aleatorio(1,23);
     liz.y= aleatorio(1,23);
-    contador_minutos = 1;
-    contador_segundos = 30;
+    //contador_minutos = 1;
+    contador_segundos = 60;
     empezarCronometro();
 }
 

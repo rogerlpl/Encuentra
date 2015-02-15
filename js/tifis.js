@@ -56,7 +56,6 @@ var melissa = {
     atrasOK: false,
     derOK: false,
     izqOK: false,
-    encontroLiz: false,
     velocidad: 20,
     x: 0,
     y: 0
@@ -108,6 +107,7 @@ function reiniciar()
 {
 	melissa.x=0;
     melissa.y=0;
+    melissa.velocidad=20;
 	liz.x = aleatorio(1,23);
     liz.y= aleatorio(1,23);
     contador_minutos = 1;
@@ -127,10 +127,7 @@ function teclado(evento)
     	{
         melissa.y += melissa.velocidad;
     	}
-    	if(encontroLiz)
-    	{
-    		 melissa.y += melissa.velocidad;
-    	}
+    	
     }
     if(codigo == teclas.DOWN)
     {
@@ -140,10 +137,7 @@ function teclado(evento)
         {
             melissa.y -= melissa.velocidad;
         }
-        if(encontroLiz)
-    	{
-    		 melissa.y -= melissa.velocidad;
-    	}
+        
     }
     if(codigo == teclas.LEFT)
     {
@@ -153,10 +147,7 @@ function teclado(evento)
     	{
     		melissa.x += melissa.velocidad;
     	}
-    	if(encontroLiz)
-    	{
-    		 melissa.y += melissa.velocidad;
-    	}
+    	
         
     }
     if(codigo == teclas.RIGHT)
@@ -167,10 +158,7 @@ function teclado(evento)
     	{
         melissa.x -= melissa.velocidad;
     	}
-    	if(encontroLiz)
-    	{
-    		 melissa.y -= melissa.velocidad;
-    	}
+    	
     }
     dibujar(codigo);
 }
@@ -240,6 +228,7 @@ function dibujar(direccion)
 
     if( (melissa.x+20 ==liz.x  && melissa.y+20 ==liz.y ) && liz.imagenOK)
     {
+    	melissa.velocidad=0;
         tablero.drawImage(liz.imagen, liz.x, liz.y);
         alert("Haz encontrado a liz :D!");
         alert("Si quieres jugar denuevo pulsa el boton reiniciar.");

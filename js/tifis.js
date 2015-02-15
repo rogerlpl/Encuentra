@@ -12,7 +12,6 @@ function reiniciarCronometro()
     liz.x = aleatorio(1,23);
     liz.y= aleatorio(1,23);
 	clearInterval(cronometro);
-	empezarCronometro();
 }
 function empezarCronometro()
 {
@@ -33,7 +32,6 @@ function empezarCronometro()
 
 			if(contador_minutos==0 && contador_segundos==1)
 			{
-				contador_minutos=0;
 				contador_segundos=0;
 				reiniciarCronometro();
 				alert("No has podido encontrar a Liz a tiempo!");
@@ -100,9 +98,7 @@ function inicio()
     liz.imagen.src = "images/liz.png";
     liz.imagen.onload = confirmarLiz;
 
-    console.log(liz.x);
-  	console.log(liz.y);
-  	
+    document.addEventListener("click", empezarCronometro);
 
     document.addEventListener("keydown", teclado);
     empezarCronometro();

@@ -12,6 +12,7 @@ function reiniciarCronometro()
     liz.x = aleatorio(1,23);
     liz.y= aleatorio(1,23);
 	clearInterval(cronometro);
+	empezarCronometro();
 }
 function empezarCronometro()
 {

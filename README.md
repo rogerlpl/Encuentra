@@ -1,3 +1,4 @@
-# Encuentra
-(Juego) Encuentra a Liz que esta escondida por el mapa.
+# Find Liz play it on http://rogerlpl.github.io/Find-Liz/
+
+Hide and Seek
  
